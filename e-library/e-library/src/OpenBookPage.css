@@ -1,0 +1,45 @@
+.open-book-page {
+  display: flex;
+  height: 100vh;
+  background: url('/assets/aged-parchment-bg.jpg') no-repeat center center;
+  background-size: cover;
+  font-family: 'Cinzel', serif;
+  color: #3b2f2f;
+}
+
+.book-scroll {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  border: 8px solid #8b5e3c;
+  margin: 1rem;
+  border-radius: 20px;
+  background: rgba(255, 248, 220, 0.85);
+  box-shadow: 0 0 20px #8b5e3c;
+}
+
+.left-scroll {
+  margin-left: 3rem;
+}
+
+.right-scroll {
+  margin-right: 3rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px dashed #8b5e3c;
+  padding-bottom: 0.5rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
