@@ -1,0 +1,74 @@
+.favorite-authors-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.author-list {
+    list-style: none;
+    padding: 0;
+}
+
+.author-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.author-item span {
+    flex: 1;
+}
+
+.notification-dot {
+    color: red;
+    margin-left: 10px;
+}
+
+.delete-icon {
+    color: red;
+    cursor: pointer;
+}
+
+.books-section {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.book-list {
+    list-style: none;
+    padding: 0;
+}
+
+.book-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.book-cover {
+    width: 50px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+.book-details {
+    flex: 1;
+}
+
+.book-details button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.book-details button:hover {
+    background-color: #0056b3;
+}

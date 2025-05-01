@@ -1,0 +1,146 @@
+/* Background Styling */
+body {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Login Container */
+.auth-container {
+    width: 400px;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+
+/* 3D Hover Effect */
+.auth-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(255, 255, 255, 0.2);
+}
+
+/* Neon Glow Animation */
+.auth-container::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 75, 43, 0.2), transparent);
+    transform: rotate(30deg);
+    animation: glowing 6s linear infinite;
+}
+
+/* Glowing Animation */
+@keyframes glowing {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Heading */
+.auth-container h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Input Fields */
+.auth-container input {
+    position: relative;  /* Ensure it's above other elements */
+    z-index: 10;
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    background: rgba(249, 249, 249, 0.2);
+    color: #0c0c0c;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Input Hover & Focus */
+.auth-container input:hover, 
+.auth-container input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    outline: none;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+}
+
+/* Login Button */
+.auth-container button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;  
+}
+
+/* Button Hover with Glow Effect */
+.auth-container button:hover {
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    box-shadow: 0 0 15px rgba(8, 105, 3, 0.8);
+    transform: scale(1.05);
+}
+
+/* Button Click Effect */
+.auth-container button:active {
+    transform: scale(0.98);
+}
+
+/* Error Message */
+.auth-container .error-msg {
+    color: #080808;
+    background: rgba(193, 140, 140, 0.7);
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Links */
+.auth-container p {
+    position: relative;  /* Ensure it's above other elements */
+    z-index: 10;
+    color: rgb(11, 11, 11);
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.auth-container a {
+    position: relative;  /* Ensure it's above other elements */
+    z-index: 10;
+    color: #ff758c;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Link Hover */
+.auth-container a:hover {
+    color: #c3166a;
+    text-decoration: underline;
+}

@@ -1,0 +1,283 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background */
+body {
+    background-color: white;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background-color: #701a1a;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    flex-grow: 1;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.search-bar {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-icon {
+    font-size: 30px;
+    color: #701a1a;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Navbar Icons */
+.nav-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-icons .icon {
+    font-size:40px; /* Increased size */
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nav-icons .icon:hover {
+    background-color: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* Sidebar */
+.left-sidebar {
+    width: 220px;
+    background-color: #fff;
+    padding: 15px;
+    border-right: 3px solid #701a1a;
+    overflow-y: auto;
+    height: calc(100vh - 60px);
+    position: fixed;
+    left: 0;
+    top: 60px;
+}
+
+.author-search-container {
+    position: relative;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.author-search-bar {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #701a1a;
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+}
+
+.author-search-icon {
+    position: absolute;
+    right: 15px;
+    font-size: 18px;
+    color: #701a1a;
+    cursor: pointer;
+}
+
+/* Author List */
+.author-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.author-list h4 {
+    font-size: 18px;
+    color: #701a1a;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.author-list ul {
+    padding: 0;
+}
+
+.author-list li {
+    padding: 12px;
+    text-align: center;
+    background-color: #c44;
+    color: white;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.author-list li:hover {
+    background-color: #a33;
+    transform: scale(1.05);
+}
+
+/* Highlight Selected Author */
+.author-list li.active {
+    background-color: #ffcc00;
+    color: #701a1a;
+    font-weight: bold;
+}
+.favorite-icon {
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.favorite-icon.favorited {
+    color: gold; /* Change star color when favorited */
+}
+/* Main Content */
+.dashboard-content {
+    margin-left: 250px;
+    padding: 80px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 250px);
+    height: calc(100vh - 60px); /* Full height minus navbar */
+    overflow-y: auto;
+}
+
+.dashboard-container::-webkit-scrollbar {
+    width: 8px;
+}
+.dashboard-content::-webkit-scrollbar-track {
+    margin-top: 20px; /* Reduce scrollbar height from the top */
+    margin-bottom: 10px; /* Optional: Adjust bottom too */
+}
+
+.dashboard-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.dashboard-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Book Sections */
+.book-section {  
+    flex-grow: 1;
+    width: 100%;
+    padding-right: 10px;
+    height: 100vh;
+}
+
+.book-section h3 {
+    font-size: 40px;
+    color: #701a1a;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Book Grid */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 books in a row */
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+}
+
+
+/* Book Card */
+.book-card {
+    width: 120px; /* Smaller book cover */
+    height: 130px;
+    background-color: #701a1a;
+    border-radius: 8px;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-card:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Book Image Styling */
+.book-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.book-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Book Title */
+.book-title {
+    margin-top: 10px; /* Increased spacing to avoid overlap */
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(5, 5, 5);
+    text-align: center;
+}
+
+/* Book Author Name */
+.book-author {
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    margin-top: 4px;
+    font-style: italic;
+}
+/* Logo Styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    padding:2px;
+    height: 50px; /* Adjust the height as needed */
+    width: auto;
+}
